@@ -1,0 +1,26 @@
+- How to run the program: go run filename.go
+
+- Go CLI:
+go build -> compiles the program (does not execute)
+go run -> compiles and executes one or two files
+go fmt -> formats all the code in each file in the current dir
+go install -> compiles and "installs" a package
+go get -> downloads the raw source code of someone else's package
+go test -> runs any tests associated with the current project
+
+[PACKAGES]
+
+- Packages are like namespaces
+- Types of packages:
+    - executable -> generates a file that we can run
+    - reusable -> code used as 'helpers'. Good place to put reusable logic
+
+- Why is package named main? Word 'main' indicates that package is used to make it an executable type
+- Package main MUST have a func called 'main'
+- Any other package name cannot be compiled into an executable file, instead it can be as a dependency (helper code)
+
+[IMPORTS]
+
+- import is used to import some kind of package and all its functionalities into our package
+- fmt is standard library go package for I/O shortened for 'format'
+- golang.org/pkg -> list of standard library packages
