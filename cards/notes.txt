@@ -1,0 +1,15 @@
+[Basic Go Types]
+
+- bool, string, int, float64
+
+[Variabe declaration examples]
+
+var card string = "Ace of Spades"
+card := "Ace of Spades"
+
+- In the first example we explicitly said that var is of type string
+- Second example uses ":=" which tells Go compiler to figure out which type to assign
+- ":=" is only used when defining a new variable
+- If we are reassigning the value of existing variable, we don't have to use :=
+- We can initialize a variable outside of a function, but we can't assign the value to it
+- Variables must first be initialized with the ':=' operator or the 'var variableName type' syntax
