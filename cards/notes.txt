@@ -13,3 +13,38 @@ card := "Ace of Spades"
 - If we are reassigning the value of existing variable, we don't have to use :=
 - We can initialize a variable outside of a function, but we can't assign the value to it
 - Variables must first be initialized with the ':=' operator or the 'var variableName type' syntax
+
+[RETURN TYPE]
+
+- Every function that returns something must have explicitly stated return type
+- Example of a function that returns a string:
+func newCard() string {
+	return "Five of Diamonds"
+}
+
+- To call a function inside the package it was created just write "nameOfFunction()"
+
+[DATA STRUCTURES]
+1. Array -> fixed length list of things
+2. Slice -> an array that can grow or shrink
+- Both structures must be defined with a data type
+
+- Declaring a slice and appending new element:
+	cards := []string{"Ace of Diamonds", newCard()}
+	cards = append(cards, "Six of Spades")
+
+- Looping through an array or slice:
+	for i, card := range cards {
+		fmt.Println(i, card)
+	}
+    - i = current index
+    - card = current card
+    - range cards = tells go to loop over the slice or array
+    - we use := in for statement to throw out the old index and element and redeclare new ones
+    - every variable we declare in for loop must be used, if we don't print index in this case it's going to throw a syntax error
+
+[BYTE SLICE]
+- Byte slice is a computer-friendly representation of a string
+- String to byte slice:
+	greeting := "Hi there!"
+	fmt.Println([]byte(greeting))
