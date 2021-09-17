@@ -48,3 +48,17 @@ func newCard() string {
 - String to byte slice:
 	greeting := "Hi there!"
 	fmt.Println([]byte(greeting))
+
+[ERRORS]
+- a value of type 'error' will have nil if nothing went wrong
+- example error if we try to load a file that does not existing:
+"Open yourfilename: no such file or directory
+exit status 1"
+
+[TESTING WITH GO]
+- To make a test create a new file ending in _test.go
+- To run all tests in a package, run the "go test" command
+- Inside the test file make functions that start with word Test eg. TestNewDeck, TestSaveToDeckAndNewDeckFromFile
+- Example function "func TestSaveToDeckAndNewDeckFromFile(t *testing.T)"
+	- parameter "t *testing.T" is a must in unit tests and serves to handle errors and logging
+	- for example function "t.Errorf" is handling an error with a formatted string we provide
