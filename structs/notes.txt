@@ -1,0 +1,8 @@
+[STRUCT]
+- Data structure. Collection of properties that are related together
+
+[ZERO VALUES IN GO]
+- string ""
+- int 0
+- float 0
+- bool false
