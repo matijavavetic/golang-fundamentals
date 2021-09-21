@@ -1,0 +1,25 @@
+[DECLARING MAPS]
+- First way:
+    colors := map[string]string{
+	    "red": "#ff0000",
+	    "green": "#4bf745",
+    }
+
+- Second way: var colors map[string]string
+- Third way: colors := make(map[string]string)
+
+[DIFFERENCE BETWEEN MAPS AND STRUCTS]
+- Map:
+    - all keys must be the same type
+    - all values must be the same type
+    - keys are indexed - can iterate over them
+    - use to represent a collection of related properties
+    - don't need to know all the keys at compile time
+    - reference type
+
+- Struct: 
+    - values can be of different types
+    - keys don't support indexing
+    - you need to know all the different fields at compile time
+    - use to represent a "thing" with a lot of different properties
+    - value type

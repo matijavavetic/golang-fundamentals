@@ -38,12 +38,17 @@ func main() {
 		},
 	}
 
+	//jimPointer := &jim
+	//jimPointer.updateName("Jimmy")
+
+	// Shortcut for the code above
+	// Go will automatically resolve a pointer
 	jim.updateName("Jimmy")
 	jim.print()
 }
 
-func (p person) updateName(newFirstName string) {
-	p.firstName = newFirstName
+func (pointerToPerson *person) updateName(newFirstName string) {
+	(*pointerToPerson).firstName = newFirstName
 }
 
 func (p person) print() {

@@ -6,3 +6,26 @@
 - int 0
 - float 0
 - bool false
+
+[PASS BY VALUE]
+- Go by default is pass by VALUE
+- Example function:
+    func (p person) updateName(firstName string) {
+        p.firstName = firstName
+    }
+- Function above creates a copy of person struct that was received by the function
+- It does not update the original person struct's data, but the copy that was created
+- Example function with pointer:
+    func (pointerToPerson *person) updateName(newFirstName string) {
+	    (*pointerToPerson).firstName = newFirstName
+    }
+- &variable - give me the memory address of the value this variable is pointing at
+- *pointer - give me the value this memory address is pointing at
+- (pointerToPerson *person) and *pointerToPerson distinction:
+    - *person - type description, it means we're working with a pointer to a person
+    - *pointerToPerson - this is an operator, it means we want to manipulate the value the pointer is referencing
+
+- variable representation in memory example:
+    - Address: 0001, Value: person{firstName:"Jim"}
+    - turn address into value with *address
+    - turn value into address with &value
