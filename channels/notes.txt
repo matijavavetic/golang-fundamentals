@@ -1,0 +1,7 @@
+- Channels are used to communicate between different go routines
+- Data type sent through the channel must always be the same depending on the channel's type
+
+- Sending data with channels:
+    - "channel <- 5" sends the value '5' into thsi channel
+    - "myNumber <- channel" wait for a value to be sent into this channel. When we get one assign the value to myNumber
+    - "fmt.Println(<- channel)" wait for a value to be sent into this channel. When we get one, log it out immediately
